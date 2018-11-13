@@ -66,6 +66,20 @@ class Adafruit_SHT31 {
         float readHumidity(void);
 
         /**
+         * Gets the last temperature reading from the sensor.
+         *
+         * @return A float value indicating the temperature.
+         */
+        float previousTemperature(void) { return temp; }
+
+        /**
+         * Gets the last relative humidity reading from the sensor.
+         *
+         * @return A float value representing relative humidity.
+         */
+        float previousHumidity(void) { return humidity; }
+
+        /**
          * Gets the current status register contents.
          *
          * @return The 16-bit status register.
